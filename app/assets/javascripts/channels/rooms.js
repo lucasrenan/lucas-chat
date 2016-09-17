@@ -7,8 +7,7 @@ App.rooms = App.cable.subscriptions.create("RoomsChannel", {
     // Called when the subscription has been terminated by the server
   },
 
-  received: function(data) {
-    var html = '<li class="mar-btm">' + data.message + '</li>';
+  received: function(html) {
     $('[data-chat]').append(html);
   },
 
