@@ -9,6 +9,7 @@ class RoomsChannel < ApplicationCable::Channel
   end
 
   def send_message(data)
+    data['email'] = current_user.email
     ActionCable.server.broadcast('room_sorocaba_channel', render_message(data))
   end
 

@@ -1,4 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-@import "chat"
+@import "users";
+@import "chat";
+
+body {
+  margin-top:20px;
+  background:#ebeef0;
+}

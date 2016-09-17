@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  root 'rooms#index'
+  resources :users, only: [:new, :create]
+
+  get 'chat' => 'rooms#index'
+
+  root 'users#new'
 end

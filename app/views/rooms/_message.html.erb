@@ -1,0 +1,14 @@
+<li class="mar-btm">
+  <div class="media-left">
+    <%= image_tag gravatar_url(data['email']), class: 'img-circle img-sm' %>
+  </div>
+  <div class="media-body pad-hor">
+    <div class="speech">
+      <p class="media-heading"><%= data['email'] %></p>
+      <p><%= data['message'] %></p>
+      <!-- <p class="speech-time">
+        <i class="fa fa-clock-o fa-fw"></i>09:23AM
+      </p> -->
+    </div>
+  </div>
+</li>
