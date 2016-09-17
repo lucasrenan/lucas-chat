@@ -9,11 +9,11 @@
       <div id="demo-chat-body" class="collapse in">
         <div class="nano has-scrollbar" style="height:380px">
           <div class="nano-content pad-all" tabindex="0" style="right: -17px;">
-            <ul class="list-unstyled media-block">
+            <ul class="list-unstyled media-block" data-chat>
 
               <li class="mar-btm">
                 <div class="media-left">
-                  <img src="http://bootdey.com/img/Content/avatar/avatar1.png" class="img-circle img-sm" alt="Profile Picture">
+                  <img src="http://bootdey.com/img/Content/avatar/avatar1.png" class="img-circle img-sm" alt=" ">
                 </div>
                 <div class="media-body pad-hor">
                   <div class="speech">
@@ -36,10 +36,10 @@
         <div class="panel-footer">
           <div class="row">
             <div class="col-xs-9">
-              <input type="text" placeholder="Enter your text" class="form-control chat-input">
+              <%= text_field_tag :message, nil, placeholder: 'Type your message...', class: 'form-control chat-input', data: { id: 'message' } %>
             </div>
             <div class="col-xs-3">
-              <button class="btn btn-primary btn-block" type="submit">Send</button>
+              <%= button_tag 'Send', class: 'btn btn-primary btn-block', data: { id: 'send-message' } %>
             </div>
           </div>
         </div>
